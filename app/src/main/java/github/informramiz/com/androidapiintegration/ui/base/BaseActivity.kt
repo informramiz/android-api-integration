@@ -17,7 +17,7 @@ import javax.inject.Inject
  * Created by Ramiz Raja on 2019-07-11.
  */
 @SuppressLint("Registered")
-class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector, Injectable {
+open class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector, Injectable {
     @Inject
     protected lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
     @Inject
