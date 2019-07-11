@@ -2,7 +2,9 @@ package github.informramiz.com.androidapiintegration.di.modules
 
 import app.jirah.parent.di.scopes.ApplicationContext
 import dagger.Module
+import dagger.Provides
 import github.informramiz.com.androidapiintegration.AppApplication
+import javax.inject.Singleton
 
 
 /**
@@ -10,6 +12,8 @@ import github.informramiz.com.androidapiintegration.AppApplication
  */
 @Module
 class AppModule {
+    @Singleton
+    @Provides
     @ApplicationContext
     fun provideApplication(appApplication: AppApplication): AppApplication {
         return appApplication
