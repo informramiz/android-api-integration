@@ -2,7 +2,7 @@ package github.informramiz.com.androidapiintegration.di.modules
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import github.informramiz.com.androidapiintegration.MainActivity
+import github.informramiz.com.androidapiintegration.ui.main.MainActivity
 
 
 /**

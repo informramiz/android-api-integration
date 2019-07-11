@@ -1,8 +1,8 @@
-package github.informramiz.com.androidapiintegration
+package github.informramiz.com.androidapiintegration.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import github.informramiz.com.androidapiintegration.ui.main.MainFragment
+import github.informramiz.com.androidapiintegration.R
 
 class MainActivity : AppCompatActivity() {
 
