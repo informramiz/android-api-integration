@@ -1,19 +1,19 @@
 package github.informramiz.com.androidapiintegration.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import github.informramiz.com.androidapiintegration.R
+import kotlinx.android.synthetic.main.aai_toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
+        setSupportActionBar(toolbar)
+        setupActionBarWithNavController(findNavController(R.id.main_nav_host_fragment))
     }
 
 }
