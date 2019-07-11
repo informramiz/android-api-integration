@@ -1,8 +1,10 @@
 package github.informramiz.com.androidapiintegration.ui.base
 
 import android.annotation.SuppressLint
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -23,5 +25,9 @@ class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector, Injectable
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> {
         return fragmentDispatchingAndroidInjector
+    }
+
+    protected inline fun <reified VM: ViewModel> appViewModels(): Lazy<VM> {
+        return viewModels { baseViewModelFactory }
     }
 }
