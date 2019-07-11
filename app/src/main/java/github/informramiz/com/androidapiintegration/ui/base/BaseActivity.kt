@@ -19,7 +19,7 @@ import javax.inject.Inject
 @SuppressLint("Registered")
 class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector, Injectable {
     @Inject
-    private lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
+    protected lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
     @Inject
     protected lateinit var baseViewModelFactory: ViewModelProvider.Factory
 

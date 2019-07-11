@@ -14,7 +14,7 @@ import javax.inject.Inject
  */
 class AppApplication : Application(), HasActivityInjector {
     @Inject
-    private lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    protected lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
         super.onCreate()
