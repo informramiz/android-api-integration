@@ -7,8 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import github.informramiz.com.androidapiintegration.R
+import github.informramiz.com.androidapiintegration.ui.base.BaseFragment
 
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment() {
 
     companion object {
         fun newInstance() = MainFragment()
