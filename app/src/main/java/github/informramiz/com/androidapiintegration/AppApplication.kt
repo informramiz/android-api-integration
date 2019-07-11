@@ -6,12 +6,14 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import timber.log.Timber
+import javax.inject.Inject
 
 
 /**
  * Created by Ramiz Raja on 2019-07-11.
  */
 class AppApplication : Application(), HasActivityInjector {
+    @Inject
     private lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
