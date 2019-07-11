@@ -5,10 +5,7 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.support.AndroidSupportInjectionModule
 import github.informramiz.com.androidapiintegration.AppApplication
-import github.informramiz.com.androidapiintegration.di.modules.ActivityModule
-import github.informramiz.com.androidapiintegration.di.modules.AppModule
-import github.informramiz.com.androidapiintegration.di.modules.FragmentModule
-import github.informramiz.com.androidapiintegration.di.modules.ViewModelModule
+import github.informramiz.com.androidapiintegration.di.modules.*
 import javax.inject.Singleton
 
 
@@ -22,7 +19,8 @@ import javax.inject.Singleton
         AppModule::class,
         ViewModelModule::class,
         ActivityModule::class,
-        FragmentModule::class]
+        FragmentModule::class,
+        ApiModule::class]
 )
 interface AppComponent {
     //we are defining custom build to provide it with AppApplication using
