@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AndroidApiIntegration</string>
+    <string name="app_name" translatable="false">AndroidApiIntegration</string>
+    <string name="error_message_network">Sorry, No Internet Connection</string>
 </resources>
