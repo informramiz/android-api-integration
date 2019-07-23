@@ -5,6 +5,7 @@ import android.app.Application
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
+import github.informramiz.com.androidapiintegration.di.injector.AppInjector
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -18,6 +19,7 @@ class AppApplication : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
+        AppInjector.init(this)
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
