@@ -28,6 +28,7 @@ class ApiModule {
         return BuildConfig.API_BASE_LINK
     }
 
+    @UnAuthorized
     @Singleton
     @Provides
     fun provideHttpClient(): OkHttpClient {

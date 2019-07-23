@@ -1,5 +1,6 @@
 package github.informramiz.com.androidapiintegration.di.modules
 
+import android.content.Context
 import app.jirah.parent.di.scopes.ApplicationContext
 import dagger.Module
 import dagger.Provides
@@ -15,7 +16,7 @@ class AppModule {
     @Singleton
     @Provides
     @ApplicationContext
-    fun provideApplication(appApplication: AppApplication): AppApplication {
+    fun provideApplication(appApplication: AppApplication): Context {
         return appApplication
     }
 }
