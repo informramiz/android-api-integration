@@ -7,6 +7,7 @@ import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import github.informramiz.com.androidapiintegration.BuildConfig
+import github.informramiz.com.androidapiintegration.model.repositories.randogrepository.RandogAPI
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -69,5 +70,11 @@ class ApiModule {
             .client(httpClient)
             .baseUrl(apiBaseLink)
             .addConverterFactory(gsonConverterFactory)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRandogAPI(retrofitBuilder: Retrofit.Builder): RandogAPI {
+        return retrofitBuilder.build().create(RandogAPI::class.java)
     }
 }
