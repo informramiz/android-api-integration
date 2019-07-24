@@ -7,16 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
-    <TextView
-        android:id="@+id/text_view_breeds_list"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_breed_names"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:clipToPadding="false"
+        android:paddingStart="?attr/startMarginDefault"
+        android:paddingTop="?attr/topMarginDefault"
+        android:paddingEnd="?attr/endMarginDefault"
+        android:paddingBottom="?attr/bottomMarginDefault"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/list_item_breed_name" />
 
-    <include layout="@layout/progress_bar_view"/>
+    <include layout="@layout/progress_bar_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
