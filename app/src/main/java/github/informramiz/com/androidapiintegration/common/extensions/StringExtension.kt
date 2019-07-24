@@ -2,6 +2,7 @@ package github.informramiz.com.androidapiintegration.common.extensions
 
 import android.text.Editable
 import android.text.SpannableStringBuilder
+import androidx.recyclerview.widget.DiffUtil
 import org.json.JSONObject
 
 /**
@@ -19,3 +20,14 @@ fun String.isJson(): Boolean {
 fun String?.editable(): Editable? {
     return this?.let { SpannableStringBuilder(this) }
 }
+
+val String.Companion.STRING_DIFF_CALLBACK : DiffUtil.ItemCallback<String>
+    get() = object : DiffUtil.ItemCallback<String>() {
+        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
+        }
+    }
