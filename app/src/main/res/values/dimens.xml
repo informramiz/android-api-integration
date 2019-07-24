@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Default screen margins  -->
+    <dimen name="start_margin_default">24dp</dimen>
+    <dimen name="end_margin_default">24dp</dimen>
+    <dimen name="top_margin_default">24dp</dimen>
+    <dimen name="bottom_margin_default">24dp</dimen>
+</resources>

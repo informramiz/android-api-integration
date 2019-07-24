@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  default margins for start, top, end, bottom of screen  -->
+    <attr name="startMarginDefault" format="reference"/>
+    <attr name="endMarginDefault" format="reference"/>
+    <attr name="topMarginDefault" format="reference"/>
+    <attr name="bottomMarginDefault" format="reference"/>
+    <!--  TextAppearances  -->
+    <attr name="textAppearanceBody1" format="reference"/>
+    <attr name="textAppearanceBody1SemiBold" format="reference"/>
+    <attr name="textAppearanceBody2" format="reference"/>
+    <attr name="textAppearanceBody2SemiBold" format="reference"/>
+</resources>

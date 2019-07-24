@@ -9,6 +9,16 @@
     <style name="AppTheme.Base" parent="AppTheme.Core">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="startMarginDefault">@dimen/start_margin_default</item>
+        <item name="endMarginDefault">@dimen/end_margin_default</item>
+        <item name="topMarginDefault">@dimen/top_margin_default</item>
+        <item name="bottomMarginDefault">@dimen/bottom_margin_default</item>
+        <!-- item TextAppearances  -->
+        <item name="textAppearanceBody1">@style/TextAppearance.App.Body1</item>
+        <item name="textAppearanceBody1SemiBold">@style/TextAppearance.App.Body1.SemiBold</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.App.Body2</item>
+        <item name="textAppearanceBody2SemiBold">@style/TextAppearance.App.Body2.SemiBold</item>
     </style>
 
     <!--  Define core theme that can also be used by dialogs, bottom sheets etc.  -->
@@ -25,5 +35,30 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
 
+    </style>
+
+    <!--Body related styles-->
+    <!--Body1 === 14sp -->
+    <style name="TextAppearance.App.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="TextAppearance.App.Body1.SemiBold" parent="TextAppearance.App.Body1">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="fontFamily">@font/open_sans_semibold</item>
+    </style>
+
+    <style name="TextAppearance.App.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="fontFamily">@font/open_sans</item>
+    </style>
+    <style name="TextAppearance.App.Body2.SemiBold" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="fontFamily">@font/open_sans_semibold</item>
     </style>
 </resources>
