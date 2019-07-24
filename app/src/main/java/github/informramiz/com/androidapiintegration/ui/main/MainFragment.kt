@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import github.informramiz.com.androidapiintegration.R
 import github.informramiz.com.androidapiintegration.model.repositories.utils.Status
 import github.informramiz.com.androidapiintegration.ui.base.BaseFragment
+import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.progress_bar_view.*
 import timber.log.Timber
 
@@ -34,6 +35,7 @@ class MainFragment : BaseFragment() {
         viewModel.getBreedsList().observe(viewLifecycleOwner, Observer { resource ->
             progress_bar.isVisible = resource.status == Status.LOADING
             Timber.d(resource.data.toString())
+            text_view_breeds_list.text = resource.data?.breedsNames?.joinToString(", ")
         })
     }
 }
