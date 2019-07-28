@@ -45,7 +45,6 @@ class MainFragment : BaseFragment() {
         recycler_view_breed_names.apply {
             adapter = recyclerAdapter
             addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
-            setHasFixedSize(true)
         }
     }
 
