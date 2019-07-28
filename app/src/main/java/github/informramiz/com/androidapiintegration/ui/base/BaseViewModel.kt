@@ -6,4 +6,4 @@ import androidx.lifecycle.ViewModel
 /**
  * Created by Ramiz Raja on 2019-07-11.
  */
-class BaseViewModel : ViewModel()
+open class BaseViewModel : ViewModel()
