@@ -1,14 +1,17 @@
 package github.informramiz.com.androidapiintegration.ui.image
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.navArgs
 import github.informramiz.com.androidapiintegration.R
 import github.informramiz.com.androidapiintegration.ui.base.BaseFragment
+import github.informramiz.com.androidapiintegration.ui.base.extensions.handleResource
+import github.informramiz.com.androidapiintegration.ui.base.extensions.loadImage
+import kotlinx.android.synthetic.main.progress_bar_view.*
+import kotlinx.android.synthetic.main.show_image_fragment.*
 
 class ShowImageFragment : BaseFragment() {
 
@@ -17,6 +20,12 @@ class ShowImageFragment : BaseFragment() {
     }
 
     private val viewModel by appViewModels<ShowImageViewModel>()
+    private val navArgs by navArgs<ShowImageFragmentArgs>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.setBreedName(navArgs.breedName)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +36,14 @@ class ShowImageFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        registerObservers()
     }
 
+    private fun registerObservers() {
+        viewModel.getImage().observe(viewLifecycleOwner, Observer { resource ->
+            handleResource(resource, null) { imageData ->
+                image_view.loadImage(imageData?.imageUrl)
+            }
+        })
+    }
 }
