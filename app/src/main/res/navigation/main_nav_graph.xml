@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
     app:startDestination="@id/main_fragment">
 
     <fragment
         android:id="@+id/main_fragment"
         android:name="github.informramiz.com.androidapiintegration.ui.main.MainFragment"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/show_image"
-            app:destination="@id/show_image_fragment"/>
+            app:destination="@id/show_image_fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/show_image_fragment"
         android:name="github.informramiz.com.androidapiintegration.ui.image.ShowImageFragment"
-        android:label="{title}">
+        android:label="{title}"
+        tools:layout="@layout/show_image_fragment">
         <argument
             android:name="breedName"
             app:argType="string"/>
