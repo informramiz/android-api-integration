@@ -3,7 +3,7 @@ package github.informramiz.com.androidapiintegration.ui.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import github.informramiz.com.androidapiintegration.R
 import kotlinx.android.synthetic.main.aai_toolbar.*
 
@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         setSupportActionBar(toolbar)
-        setupActionBarWithNavController(findNavController(R.id.main_nav_host_fragment))
+        val navController = findNavController(R.id.main_nav_host_fragment)
+        toolbar.setupWithNavController(navController)
     }
 
 }
