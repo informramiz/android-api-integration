@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import github.informramiz.com.androidapiintegration.di.factories.ViewModelFactory
 import github.informramiz.com.androidapiintegration.di.keys.ViewModelKey
+import github.informramiz.com.androidapiintegration.ui.image.ShowImageViewModel
 import github.informramiz.com.androidapiintegration.ui.main.MainViewModel
 
 
@@ -22,4 +23,9 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ShowImageViewModel::class)
+    fun bindShowImageViewModel(showImageViewModel: ShowImageViewModel): ViewModel
 }
