@@ -5,9 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.image.ShowImageFragment">
 
-    <TextView
+    <ImageView
+        android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_marginStart="?attr/startMarginDefault"
+        android:layout_marginEnd="?attr/endMarginDefault"
+        android:layout_marginTop="?attr/topMarginDefault"
+        android:layout_marginBottom="?attr/bottomMarginDefault"
+        android:src="@drawable/ic_launcher_foreground"/>
 
 </FrameLayout>

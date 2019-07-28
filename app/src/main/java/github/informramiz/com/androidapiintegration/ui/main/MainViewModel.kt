@@ -1,6 +1,5 @@
 package github.informramiz.com.androidapiintegration.ui.main
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import github.informramiz.com.androidapiintegration.model.repositories.randogrepository.RandogRepository
