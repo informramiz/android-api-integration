@@ -12,8 +12,10 @@ class BreedsRecyclerAdapter(private val callback: ((String) -> Unit)? = null)
     : ListAdapter<String, BreedItemViewHolder>(String.STRING_DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BreedItemViewHolder {
         return BreedItemViewHolder.create(parent).apply {
-            if (adapterPosition != RecyclerView.NO_POSITION) {
-                callback?.invoke(getItem(adapterPosition))
+            itemView.setOnClickListener {
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    callback?.invoke(getItem(adapterPosition))
+                }
             }
         }
     }
