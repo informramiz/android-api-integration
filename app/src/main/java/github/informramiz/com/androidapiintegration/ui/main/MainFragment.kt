@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import github.informramiz.com.androidapiintegration.R
@@ -25,7 +26,8 @@ class MainFragment : BaseFragment() {
 
     private val viewModel by appViewModels<MainViewModel>()
     private val recyclerAdapter = BreedsRecyclerAdapter { breedName ->
-        //TODO
+        val showImageAction = MainFragmentDirections.showImage(breedName, breedName.capitalize())
+        findNavController().navigate(showImageAction)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -52,7 +54,6 @@ class MainFragment : BaseFragment() {
             handleResource(resource, progress_bar) {
                 resource.data ?: return@handleResource
                 recyclerAdapter.submitList(resource.data.breedsNames)
-
             }
         })
     }

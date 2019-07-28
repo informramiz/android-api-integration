@@ -7,5 +7,21 @@
     <fragment
         android:id="@+id/main_fragment"
         android:name="github.informramiz.com.androidapiintegration.ui.main.MainFragment"
-        android:label="@string/app_name"/>
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/show_image"
+            app:destination="@id/show_image_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/show_image_fragment"
+        android:name="github.informramiz.com.androidapiintegration.ui.image.ShowImageFragment"
+        android:label="{title}">
+        <argument
+            android:name="breedName"
+            app:argType="string"/>
+        <argument
+            android:name="title"
+            app:argType="string"/>
+    </fragment>
 </navigation>
